@@ -1,6 +1,6 @@
 # SharpSFV — C++ port
 
-A C++20 port of [SharpSFV](https://github.com/Wishwanderer/SharpSFV) (C# / .NET 10, by L33T).
+A C++20 port of [SharpSFV](https://github.com/Wishwanderer/SharpSFV) (C# / .NET 10).
 It has three parts:
 
 * **A core library** (`src/core/`, no UI code): the hashing engine, verification, reading and
