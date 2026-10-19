@@ -1,0 +1,15 @@
+<!-- C# reference oracle: SharpSFV's own (non-UI) logic, used by scripts/compare_with_oracle.sh
+     to diff the C++ port against the original behaviour. Build: dotnet build -c Release -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>$(NoWarn);CS8600;CS8602;CS8604</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Same version SharpSFV.csproj references -->
+    <PackageReference Include="System.IO.Hashing" Version="10.0.1" />
+  </ItemGroup>
+</Project>

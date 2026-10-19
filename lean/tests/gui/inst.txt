@@ -1,0 +1,14 @@
+key alt+o i i
+sleep 1
+key Return
+sleep 1.5
+shot installed
+key Return
+sh A=/root/.wine/drive_c/users/root/AppData/Local/SharpSFV; cd @GT@; (ls $A; WINEDEBUG=-all wine reg query 'HKCU\Environment' /v Path 2>&1 | tr -d '\r') > inst_$SIDE.txt
+key alt+o i c
+sleep 1
+key y
+sleep 1.5
+shot uninstalled
+key Return
+sh A=/root/.wine/drive_c/users/root/AppData/Local/SharpSFV; cd @GT@; (ls $A 2>&1; WINEDEBUG=-all wine reg query 'HKCU\Environment' /v Path 2>&1 | tr -d '\r') > uninst_$SIDE.txt

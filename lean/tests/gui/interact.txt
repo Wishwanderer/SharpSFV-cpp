@@ -1,0 +1,35 @@
+sleep 4
+click 400 180
+sleep 1
+shot sorthash
+click 400 180
+sleep 1
+shot sorthashdesc
+click 160 150
+type size_00000
+sleep 1.5
+shot search
+key ctrl+a BackSpace
+sleep 1.5
+click 458 151
+sleep 1
+shot dups
+click 458 151
+sleep 1
+click 100 212
+rclick 100 212
+shot ctxmenu
+key Up Return
+sleep 1
+shot removed
+click 100 226
+key ctrl+s
+sleep 1.5
+shot savedialog
+type saved_test.xxh3
+key Return
+sleep 1.5
+sh mv @GT@/corpus/data/saved_test.xxh3 @GT@/saved_$SIDE.xxh3
+key alt+f x
+sleep 1
+sh cp @GT@/$SIDE/SharpSFV.ini @GT@/ini_after_$SIDE.ini

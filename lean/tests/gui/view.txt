@@ -1,0 +1,17 @@
+sleep 4
+key alt+v t
+sleep 1
+key alt+v f
+sleep 1
+shot timefull
+key alt+v h
+sleep 1
+shot nohash
+click 60 130
+key ctrl+c
+sleep 0.5
+sh DISPLAY=:99 xclip -o -selection clipboard > @GT@/clip_$SIDE.txt
+key ctrl+a
+key ctrl+c
+sleep 0.5
+sh DISPLAY=:99 xclip -o -selection clipboard > @GT@/clipall_$SIDE.txt

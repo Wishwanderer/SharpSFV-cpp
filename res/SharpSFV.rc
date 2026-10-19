@@ -1,0 +1,86 @@
+// SharpSFV (C++ port) - Windows resources.
+// Copyright (C) 2025 L33T (original C# SharpSFV). Modified 2026-10-03: C++20 port. GPL-3.0.
+#include <windows.h>
+#include <commctrl.h>
+#include "resource.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+IDI_APP ICON "SharpSFV.ico"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "SharpSFV.manifest"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,7,0,0
+ PRODUCTVERSION 2,7,0,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "SharpSFV checksum utility (C++ port)"
+            VALUE "FileVersion", "2.7.0.0"
+            VALUE "InternalName", "SharpSFV"
+            VALUE "LegalCopyright", "Copyright (C) 2025 L33T; C++ port 2026. GNU GPL v3."
+            VALUE "OriginalFilename", "SharpSFV.exe"
+            VALUE "ProductName", "SharpSFV"
+            VALUE "ProductVersion", "2.7.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+// Rename dialog (SimpleInputDialog.cs). Caption and prompt are set at run time.
+IDD_INPUT DIALOGEX 0, 0, 250, 72
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "", IDC_INPUT_LABEL, 10, 10, 230, 10, SS_NOPREFIX
+    EDITTEXT        IDC_INPUT_EDIT, 10, 24, 230, 13, ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK", IDOK, 136, 48, 50, 14
+    PUSHBUTTON      "Cancel", IDCANCEL, 190, 48, 50, 14
+END
+
+// Read-only text with Copy (Help > View current Disk Data).
+IDD_TEXT DIALOGEX 0, 0, 330, 250
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TEXT_EDIT, 7, 7, 316, 210, ES_MULTILINE | ES_READONLY | ES_AUTOVSCROLL | WS_VSCROLL | WS_HSCROLL | ES_AUTOHSCROLL
+    PUSHBUTTON      "Copy to Clipboard", IDC_TEXT_COPY, 7, 227, 80, 15
+    DEFPUSHBUTTON   "Close", IDOK, 273, 227, 50, 15
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 230, 150
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About SharpSFV"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    ICON            IDI_APP, IDC_ABOUT_ICON, 10, 10, 21, 20
+    LTEXT           "", IDC_ABOUT_TEXT, 40, 10, 180, 100, SS_NOPREFIX
+    CONTROL         "<a href=""https://github.com/Wishwanderer/SharpSFV"">Visit GitHub Repository</a>", IDC_ABOUT_LINK, "SysLink", WS_TABSTOP, 40, 112, 180, 10
+    DEFPUSHBUTTON   "OK", IDOK, 90, 128, 50, 14
+END
+
+// Options > Processing Mode > Drive Classification...
+IDD_DRIVES DIALOGEX 0, 0, 470, 236
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Drive Classification"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "", IDC_DRIVES_INFO, 7, 7, 380, 24, SS_NOPREFIX
+    PUSHBUTTON      "Allow...", IDC_DRIVES_CONSENT, 393, 7, 70, 15
+    CONTROL         "", IDC_DRIVES_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 7, 34, 456, 172
+    PUSHBUTTON      "Set &SSD", IDC_DRIVES_SSD, 7, 214, 60, 15
+    PUSHBUTTON      "Set &HDD", IDC_DRIVES_HDD, 71, 214, 60, 15
+    PUSHBUTTON      "&Forget (detect again)", IDC_DRIVES_FORGET, 135, 214, 85, 15
+    PUSHBUTTON      "&Add Drive...", IDC_DRIVES_ADD, 224, 214, 60, 15
+    DEFPUSHBUTTON   "Close", IDOK, 413, 214, 50, 15
+END

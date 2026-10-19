@@ -1,0 +1,18 @@
+key alt+m j
+sleep 1
+shot jobmode
+key ctrl+o
+sleep 1.5
+type @WGT@\corpus\data\c.nfo
+key Return
+sleep 2
+key ctrl+o
+sleep 1.5
+type @WGT@\corpus\data\mixed.md5
+key Return
+sleep 3
+shot jobsdone
+sh mkdir -p @GT@/jobs_$SIDE && mv @GT@/corpus/data/[12].*.xxh3 @GT@/jobs_$SIDE/
+key alt+m c
+sleep 1
+shot cleared

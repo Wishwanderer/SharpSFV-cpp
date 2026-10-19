@@ -1,0 +1,4 @@
+build*/
+build-*/
+tools/oracle/bin/
+tools/oracle/obj/

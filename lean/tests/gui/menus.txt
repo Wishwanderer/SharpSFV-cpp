@@ -1,0 +1,16 @@
+key alt+f
+shot file
+key Escape Escape
+key alt+o
+shot options
+key Down Down Down Right
+shot procmode
+key Escape Escape Escape
+key alt+v
+shot view
+key Escape Escape
+key alt+h
+key Up Return
+sleep 1
+shot about
+key Return

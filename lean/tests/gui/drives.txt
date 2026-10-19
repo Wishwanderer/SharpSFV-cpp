@@ -1,0 +1,12 @@
+sleep 3
+shot run
+key alt+o m d
+sleep 1.5
+shot drivesdlg
+key Escape
+sleep 0.5
+key alt+h d
+sleep 1.5
+shot diskinfo
+key Escape
+sh rm -rf /root/.wine/drive_c/users/root/AppData/Local/SharpSFV

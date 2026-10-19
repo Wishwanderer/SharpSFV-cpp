@@ -1,0 +1,11 @@
+key alt+o i r
+sleep 1.5
+shot regmsg
+key Return
+sleep 0.5
+sh cd @GT@ && rm -f reg_$SIDE.txt; for k in 'HKCU\Software\Classes\SharpSFV.File' 'HKCU\Software\Classes\*\shell\SharpSFV' 'HKCU\Software\Classes\Directory\shell\SharpSFV' 'HKCU\Software\Classes\.sfv'; do WINEDEBUG=-all wine reg query "$k" /s 2>/dev/null | tr -d '\r' >> reg_$SIDE.txt; done
+key alt+o i u
+sleep 1.5
+key Return
+sleep 0.5
+sh cd @GT@ && WINEDEBUG=-all wine reg query 'HKCU\Software\Classes\SharpSFV.File' /s > regafter_$SIDE.txt 2>&1; true

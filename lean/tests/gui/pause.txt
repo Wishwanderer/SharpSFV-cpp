@@ -1,0 +1,10 @@
+sh printf '%s' '@WGT@\large' | DISPLAY=:99 xclip -selection clipboard
+key ctrl+v
+sleep 1.0
+shot running
+click 660 72
+sleep 1
+shot paused
+click 748 72
+sleep 1.5
+shot stopped

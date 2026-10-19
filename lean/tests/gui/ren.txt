@@ -1,0 +1,19 @@
+sleep 4
+shot verified
+click 60 140
+rclick 60 140
+key Down Down Down Return
+sleep 1.5
+shot renamedlg
+key ctrl+a
+type renamed.dat
+key Return
+sleep 1
+shot renamed
+sh ls @GT@/ren > @GT@/renls_$SIDE.txt; rm -rf @GT@/ren/renamed.dat; cp @GT@/corpus/data/sub1/f1.dat @GT@/ren/
+click 60 126
+sh printf '%s' 0123 | DISPLAY=:99 xclip -selection clipboard
+key alt+e l
+sleep 1
+shot cmpclip
+key Return

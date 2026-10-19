@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{6517CC7A-ADA4-176D-076C-6B746254E37E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="lean\app\CliMain.cpp" />
+    <ClCompile Include="lean\app\LiteMain.cpp" />
+    <ClCompile Include="lean\base\Base.cpp" />
+    <ClCompile Include="lean\base\FileSystem.cpp" />
+    <ClCompile Include="lean\base\Path.cpp" />
+    <ClCompile Include="lean\base\Sort.cpp" />
+    <ClCompile Include="lean\base\System.cpp" />
+    <ClCompile Include="lean\base\Text.cpp" />
+    <ClCompile Include="lean\base\Thread.cpp" />
+    <ClCompile Include="lean\core\ChecksumFile.cpp" />
+    <ClCompile Include="lean\core\Cli.cpp" />
+    <ClCompile Include="lean\core\Drive.cpp" />
+    <ClCompile Include="lean\core\DriveStore.cpp" />
+    <ClCompile Include="lean\core\Engine.cpp" />
+    <ClCompile Include="lean\core\Filter.cpp" />
+    <ClCompile Include="lean\core\Hash.cpp" />
+    <ClCompile Include="lean\core\JobRunner.cpp" />
+    <ClCompile Include="lean\core\JobStore.cpp" />
+    <ClCompile Include="lean\core\ListModel.cpp" />
+    <ClCompile Include="lean\core\Scripts.cpp" />
+    <ClCompile Include="lean\core\Settings.cpp" />
+    <ClCompile Include="lean\core\Store.cpp" />
+    <ClCompile Include="lean\core\Types.cpp" />
+    <ClCompile Include="lean\gui\Dialogs.cpp" />
+    <ClCompile Include="lean\gui\GuiMain.cpp" />
+    <ClCompile Include="lean\gui\MainWindow.cpp" />
+    <ClCompile Include="lean\gui\MainWindowActions.cpp" />
+    <ClCompile Include="lean\gui\MainWindowList.cpp" />
+    <ClCompile Include="lean\gui\MainWindowMenus.cpp" />
+    <ClCompile Include="lean\gui\MainWindowRun.cpp" />
+    <ClCompile Include="lean\gui\Panel.cpp" />
+    <ClCompile Include="lean\gui\SingleInstance.cpp" />
+    <ClCompile Include="lean\gui\SystemIntegration.cpp" />
+    <ClCompile Include="lean\gui\Win32Util.cpp" />
+    <ClCompile Include="lean\lite\LitePlatform.cpp" />
+    <ClCompile Include="lean\lite\LiteVerify.cpp" />
+    <ClCompile Include="lean\tests\LeanProbe.cpp" />
+    <ClCompile Include="lean\tests\LeanTests.cpp" />
+    <ClCompile Include="lean\tests\LiteHost.cpp" />
+    <ClCompile Include="lean\tests\LiteTests.cpp" />
+    <ClCompile Include="src\cli\main.cpp" />
+    <ClCompile Include="src\core\AppSettings.cpp" />
+    <ClCompile Include="src\core\ChecksumParser.cpp" />
+    <ClCompile Include="src\core\ChecksumWriter.cpp" />
+    <ClCompile Include="src\core\Console.cpp" />
+    <ClCompile Include="src\core\DataStorage.cpp" />
+    <ClCompile Include="src\core\DriveClassifier.cpp" />
+    <ClCompile Include="src\core\DriveDetector.cpp" />
+    <ClCompile Include="src\core\Engine.cpp" />
+    <ClCompile Include="src\core\EnvPath.cpp" />
+    <ClCompile Include="src\core\FileFilter.cpp" />
+    <ClCompile Include="src\core\FileStore.cpp" />
+    <ClCompile Include="src\core\FileSystem.cpp" />
+    <ClCompile Include="src\core\Hasher.cpp" />
+    <ClCompile Include="src\core\Headless.cpp" />
+    <ClCompile Include="src\core\JobStore.cpp" />
+    <ClCompile Include="src\core\ListModel.cpp" />
+    <ClCompile Include="src\core\PathUtil.cpp" />
+    <ClCompile Include="src\core\Scripts.cpp" />
+    <ClCompile Include="src\core\SortUtil.cpp" />
+    <ClCompile Include="src\core\StringPool.cpp" />
+    <ClCompile Include="src\core\Text.cpp" />
+    <ClCompile Include="src\core\Threading.cpp" />
+    <ClCompile Include="src\core\Types.cpp" />
+    <ClCompile Include="src\gui\Dialogs.cpp" />
+    <ClCompile Include="src\gui\main.cpp" />
+    <ClCompile Include="src\gui\MainWindow.cpp" />
+    <ClCompile Include="src\gui\MainWindowActions.cpp" />
+    <ClCompile Include="src\gui\MainWindowList.cpp" />
+    <ClCompile Include="src\gui\MainWindowMenus.cpp" />
+    <ClCompile Include="src\gui\MainWindowRun.cpp" />
+    <ClCompile Include="src\gui\Panel.cpp" />
+    <ClCompile Include="src\gui\SingleInstance.cpp" />
+    <ClCompile Include="src\gui\SystemIntegration.cpp" />
+    <ClCompile Include="src\gui\Win32Util.cpp" />
+    <ClCompile Include="src\shared\RuntimeTrim.cpp" />
+    <ClCompile Include="tests\probe_main.cpp" />
+    <ClCompile Include="tests\test_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lean\base\Base.h" />
+    <ClInclude Include="lean\base\FileSystem.h" />
+    <ClInclude Include="lean\base\Path.h" />
+    <ClInclude Include="lean\base\Sort.h" />
+    <ClInclude Include="lean\base\Str.h" />
+    <ClInclude Include="lean\base\StrSet.h" />
+    <ClInclude Include="lean\base\System.h" />
+    <ClInclude Include="lean\base\Text.h" />
+    <ClInclude Include="lean\base\Thread.h" />
+    <ClInclude Include="lean\base\Vec.h" />
+    <ClInclude Include="lean\core\ChecksumFile.h" />
+    <ClInclude Include="lean\core\Cli.h" />
+    <ClInclude Include="lean\core\Drive.h" />
+    <ClInclude Include="lean\core\DriveStore.h" />
+    <ClInclude Include="lean\core\Engine.h" />
+    <ClInclude Include="lean\core\Filter.h" />
+    <ClInclude Include="lean\core\Hash.h" />
+    <ClInclude Include="lean\core\JobStore.h" />
+    <ClInclude Include="lean\core\ListModel.h" />
+    <ClInclude Include="lean\core\Scripts.h" />
+    <ClInclude Include="lean\core\Settings.h" />
+    <ClInclude Include="lean\core\Store.h" />
+    <ClInclude Include="lean\core\Types.h" />
+    <ClInclude Include="lean\gui\App.h" />
+    <ClInclude Include="lean\gui\Dialogs.h" />
+    <ClInclude Include="lean\gui\MainWindow.h" />
+    <ClInclude Include="lean\gui\Panel.h" />
+    <ClInclude Include="lean\gui\SingleInstance.h" />
+    <ClInclude Include="lean\gui\SystemIntegration.h" />
+    <ClInclude Include="lean\gui\Win32Util.h" />
+    <ClInclude Include="lean\lite\LitePlatform.h" />
+    <ClInclude Include="lean\lite\LiteVerify.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="src\core\AppSettings.h" />
+    <ClInclude Include="src\core\ChecksumParser.h" />
+    <ClInclude Include="src\core\ChecksumWriter.h" />
+    <ClInclude Include="src\core\Console.h" />
+    <ClInclude Include="src\core\DataStorage.h" />
+    <ClInclude Include="src\core\DriveClassifier.h" />
+    <ClInclude Include="src\core\DriveDetector.h" />
+    <ClInclude Include="src\core\Engine.h" />
+    <ClInclude Include="src\core\EnvPath.h" />
+    <ClInclude Include="src\core\FileFilter.h" />
+    <ClInclude Include="src\core\FileStore.h" />
+    <ClInclude Include="src\core\FileSystem.h" />
+    <ClInclude Include="src\core\Hasher.h" />
+    <ClInclude Include="src\core\Headless.h" />
+    <ClInclude Include="src\core\JobStore.h" />
+    <ClInclude Include="src\core\ListModel.h" />
+    <ClInclude Include="src\core\PathUtil.h" />
+    <ClInclude Include="src\core\Scripts.h" />
+    <ClInclude Include="src\core\SortUtil.h" />
+    <ClInclude Include="src\core\StringPool.h" />
+    <ClInclude Include="src\core\Text.h" />
+    <ClInclude Include="src\core\Threading.h" />
+    <ClInclude Include="src\core\Types.h" />
+    <ClInclude Include="src\gui\App.h" />
+    <ClInclude Include="src\gui\Dialogs.h" />
+    <ClInclude Include="src\gui\MainWindow.h" />
+    <ClInclude Include="src\gui\Panel.h" />
+    <ClInclude Include="src\gui\SingleInstance.h" />
+    <ClInclude Include="src\gui\SystemIntegration.h" />
+    <ClInclude Include="src\gui\Win32Util.h" />
+    <ClInclude Include="third_party\xxhash\xxhash.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\SharpSFV.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

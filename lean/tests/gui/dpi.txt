@@ -1,0 +1,5 @@
+sleep 4
+shot done
+key alt+o
+shot menu
+key Escape Escape

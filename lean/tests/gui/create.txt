@@ -1,0 +1,10 @@
+sh cd @GT@/$SIDE && WINEDEBUG=-all wine ./SharpSFV.exe -create '@WGT@\corpus\data\sub2' >/dev/null 2>&1 &
+sleep 2.5
+shot dialog
+click 320 334
+key ctrl+a
+type cm_test
+key Return
+sleep 3
+shot after
+sh mv @GT@/corpus/data/sub1/cm_test.xxh3 @GT@/cm_$SIDE.xxh3; cp @GT@/$SIDE/SharpSFV.ini @GT@/cmini_$SIDE.ini

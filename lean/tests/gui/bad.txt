@@ -1,0 +1,16 @@
+sleep 4
+key alt+o b g
+sleep 1.5
+key ctrl+a
+type delbad.bat
+key Return
+sleep 1
+sh mv @GT@/bad/delbad.bat @GT@/delbad_$SIDE.bat
+key alt+o b r
+sleep 1
+key y
+sleep 1
+shot renamed
+key Return
+sleep 0.5
+sh ls @GT@/bad > @GT@/badls_$SIDE.txt; rm -f @GT@/bad/*.CORRUPT; cp @GT@/corpus/data/sub1/f0.dat @GT@/corpus/data/sub1/f1.dat @GT@/bad/
